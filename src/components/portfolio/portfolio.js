@@ -19,11 +19,11 @@ class Portfolio extends React.Component {
     };
 
     openModal = (e, data) => {
-        console.log(data);
         this.setState({ displayModal: true, modal: data });
     };
 
-    closeModal = () => {
+    closeModal = e => {
+        e.preventDefault();
         this.setState({ displayModal: false, modal: '' });
     };
 
@@ -44,7 +44,9 @@ class Portfolio extends React.Component {
                                 <img src={flower} alt="e-commerce app" />
                             </div>
 
-                            <h2 className="card-label">E-Commerce App</h2>
+                            <h2 className="card-label">
+                                Flower Co E-Commerce App
+                            </h2>
                         </div>
 
                         <div
@@ -80,7 +82,7 @@ class Portfolio extends React.Component {
                                 />
                             </div>
 
-                            <h2 className="card-label">Compound Careers</h2>
+                            <h2 className="card-label">Lambda Compound</h2>
                         </div>
                     </div>
                 </Container>

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Page } from '../../style/utils';
+import { colors, Page } from '../../style/utils';
 
 export const Container = styled(Page)`
     .projects {
@@ -43,9 +43,11 @@ export const Container = styled(Page)`
         }
 
         .card-label {
-            padding: 1.5rem;
+            padding: 2.5rem;
             box-shadow: 0px -3px 10px 0 gray;
             font-size: 3rem;
+            background: ${colors.second};
+            color: white;
         }
 
         .git-card-icon {
