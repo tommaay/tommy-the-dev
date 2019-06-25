@@ -49,12 +49,15 @@ class navbar extends React.Component {
                     Portfolio
                 </NavItem>
 
-                <div class="social-icons">
-                    <a href="#">
-                        <i class="fab fa-linkedin-in" />
+                <div className="social-icons">
+                    <a
+                        href="https://www.linkedin.com/in/tommy-huynh-ops/"
+                        target="_blank"
+                    >
+                        <i className="fab fa-linkedin-in" />
                     </a>
-                    <a href="#">
-                        <i class="fab fa-github" />
+                    <a href="https://github.com/tommaay" target="_blank">
+                        <i className="fab fa-github" />
                     </a>
                 </div>
             </Navbar>

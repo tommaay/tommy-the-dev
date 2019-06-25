@@ -20,7 +20,7 @@ export const Navbar = styled.div`
 
     .social-icons {
         margin-top: 3rem;
-        
+
         a {
             display: inline-block;
             height: 4.5rem;
@@ -33,8 +33,9 @@ export const Navbar = styled.div`
             line-height: 4.7rem;
             margin: 0 1rem;
 
-        :hover {
-            background: orangered;
+            :hover {
+                background: orangered;
+            }
         }
     }
 `;

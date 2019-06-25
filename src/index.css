@@ -172,8 +172,8 @@ a:hover {
 
 /* App Container */
 .App {
-    margin: 0 auto;
     color: #505050;
+    position: relative;
 }
 
 .title {

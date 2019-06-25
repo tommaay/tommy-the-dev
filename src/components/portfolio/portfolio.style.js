@@ -1,25 +1,26 @@
 import styled from 'styled-components';
-import { colors, Page } from '../../style/utils';
+import { Page } from '../../style/utils';
 
 export const Container = styled(Page)`
     .projects {
         display: flex;
-        justify-content: space-evenly;
         align-items: center;
         flex-wrap: wrap;
+        max-width: 100rem;
     }
 
     .project-card {
+        position: relative;
+        z-index: 2;
         background-color: white;
-        /* padding: 1rem; */
         font-size: 1.5rem;
         text-align: center;
         border-radius: 0.3rem;
-        box-shadow: 0px 0px 5px black;
+        box-shadow: 0px 0px 4px 2px gray;
         transition: all 0.3s;
         margin-bottom: 5rem;
         position: relative;
-        height: 65rem;
+        width: 100%;
 
         a {
             color: black;
@@ -27,26 +28,24 @@ export const Container = styled(Page)`
 
         &:hover {
             transform: translateY(-0.5rem);
-            box-shadow: 0 1px 3px black;
+            box-shadow: 0 0px 10px 3px gray;
         }
 
         &:active {
             transform: translateY(-0.5rem);
-            box-shadow: 0 0px 1px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 0px 4px 1px gray;
         }
 
         .img-header {
             img {
-                max-width: 100%;
-
-                &:hover {
-                    border: 2px solid yellow;
-                }
+                width: 100%;
             }
         }
 
         .card-label {
-            padding: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0px -3px 10px 0 gray;
+            font-size: 3rem;
         }
 
         .git-card-icon {

@@ -1,5 +1,8 @@
 import React from 'react';
 
+// Modal
+import ProjectModal from './project_modal';
+
 // Styled-Components
 import { Container } from './portfolio.style';
 
@@ -11,105 +14,84 @@ import compound from '../../assets/images/compound.png';
 
 class Portfolio extends React.Component {
     state = {
-        index: 0,
-        direction: null,
+        displayModal: false,
+        modal: '',
     };
 
-    handleSelect = (e, selectedIndex) => {
-        this.setState({
-            index: selectedIndex,
-            direction: e.direction,
-        });
+    openModal = (e, data) => {
+        console.log(data);
+        this.setState({ displayModal: true, modal: data });
+    };
+
+    closeModal = () => {
+        this.setState({ displayModal: false, modal: '' });
     };
 
     render() {
         return (
-            <Container>
-                <h1 className="heading-main mb-60 mt-60">
-                    <span className="impact">Portfolio</span>
-                </h1>
+            <>
+                <Container>
+                    <h1 className="heading-main mb-60 mt-60">
+                        <span className="impact">Portfolio</span>
+                    </h1>
 
-                <div className="projects">
-                    <div className="project-card">
-                        <div className="img-header">
-                            <a
-                                href="https://flower-co.netlify.com/"
-                                target="_blank"
+                    <div className="projects">
+                        <div className="project-card">
+                            <div
+                                className="img-header"
+                                onClick={e => this.openModal(e, 'flower')}
                             >
                                 <img src={flower} alt="e-commerce app" />
-                            </a>
+                            </div>
+
+                            <h2 className="card-label">E-Commerce App</h2>
                         </div>
 
-                        <h2 className="card-label">E-Commerce App</h2>
-                        <a
-                            href="https://github.com/tommaay/frontend-cannabis-e-commerce-app"
-                            target="_blank"
+                        <div
+                            className="project-card"
+                            onClick={e => this.openModal(e, 'cliquebook')}
                         >
-                            <i class="fab fa-github git-card-icon" />
-                        </a>
-                    </div>
-
-                    <div className="project-card">
-                        <div className="img-header">
-                            <a
-                                href="https://clubhandbook.netlify.com/"
-                                target="_blank"
-                            >
+                            <div className="img-header">
                                 <img src={cliquebook} alt="e-commerce app" />
-                            </a>
+                            </div>
+
+                            <h2 className="card-label">CliqueBook</h2>
                         </div>
 
-                        <h2 className="card-label">CliqueBook</h2>
-                        <a
-                            href="https://github.com/Lambda-School-Labs/labs10-club-handbook"
-                            target="_blank"
+                        <div
+                            className="project-card"
+                            onClick={e => this.openModal(e, 'giphy')}
                         >
-                            <i class="fab fa-github git-card-icon" />
-                        </a>
-                    </div>
-
-                    <div className="project-card">
-                        <div className="img-header">
-                            <a
-                                href="https://eaze-take-home-tommy-huynh.netlify.com/"
-                                target="_blank"
-                            >
+                            <div className="img-header">
                                 <img src={giphy} alt="GIF finder" />
-                            </a>
+                            </div>
+
+                            <h2 className="card-label">GIPHY App</h2>
                         </div>
 
-                        <h2 className="card-label">GIPHY App</h2>
-                        <a
-                            href="https://github.com/tommaay/eaze-frontend-tommy-huynh"
-                            target="_blank"
+                        <div
+                            className="project-card"
+                            onClick={e => this.openModal(e, 'compound')}
                         >
-                            <i class="fab fa-github git-card-icon" />
-                        </a>
-                    </div>
-
-                    <div className="project-card">
-                        <div className="img-header">
-                            <a
-                                href="https://www.compound.careers"
-                                target="_blank"
-                            >
+                            <div className="img-header">
                                 <img
                                     src={compound}
                                     alt="compound.careers webpage"
                                 />
-                            </a>
-                        </div>
+                            </div>
 
-                        <h2 className="card-label">Compound Careers</h2>
-                        <a
-                            href="https://github.com/LambdaWinter19Hackathon-Calculator/Hackathon_Income_Calculator"
-                            target="_blank"
-                        >
-                            <i class="fab fa-github git-card-icon" />
-                        </a>
+                            <h2 className="card-label">Compound Careers</h2>
+                        </div>
                     </div>
-                </div>
-            </Container>
+                </Container>
+
+                {this.state.displayModal ? (
+                    <ProjectModal
+                        closeModal={this.closeModal}
+                        modal={this.state.modal}
+                    />
+                ) : null}
+            </>
         );
     }
 }
