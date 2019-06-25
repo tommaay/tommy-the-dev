@@ -21,6 +21,7 @@ export const Container = styled(Page)`
         margin-bottom: 5rem;
         position: relative;
         width: 100%;
+        cursor: pointer;
 
         a {
             color: black;
