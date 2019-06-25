@@ -4,12 +4,10 @@ import React from 'react';
 import Image from 'react-bootstrap/Image';
 
 // Styled-Components
-import { NavContainer, NavItem } from './Navbar.style';
-
-// Image
+import { Navbar, NavItem } from './navbar.style';
 import thumbnail from '../../assets/images/profesional_thumb.jpeg';
 
-class Navbar extends React.Component {
+class navbar extends React.Component {
     state = {
         selected: 'about',
     };
@@ -26,47 +24,42 @@ class Navbar extends React.Component {
         const selected = this.state.selected;
 
         return (
-            <NavContainer>
+            <Navbar>
                 <Image src={thumbnail} roundedCircle />
 
                 <NavItem
                     href="#about"
-                    active={selected == 'about' ? true : false}
+                    active={selected === 'about' ? true : false}
                     onClick={this.select}
                 >
                     About
                 </NavItem>
                 <NavItem
                     href="#skills"
-                    active={selected == 'skills' ? true : false}
+                    active={selected === 'skills' ? true : false}
                     onClick={this.select}
                 >
                     Skills
                 </NavItem>
                 <NavItem
-                    href="#education"
-                    active={selected == 'education' ? true : false}
-                    onClick={this.select}
-                >
-                    Education
-                </NavItem>
-                <NavItem
-                    href="#experience"
-                    active={selected == 'experience' ? true : false}
-                    onClick={this.select}
-                >
-                    Experience
-                </NavItem>
-                <NavItem
                     href="#portfolio"
-                    active={selected == 'portfolio' ? true : false}
+                    active={selected === 'portfolio' ? true : false}
                     onClick={this.select}
                 >
                     Portfolio
                 </NavItem>
-            </NavContainer>
+
+                <div class="social-icons">
+                    <a href="#">
+                        <i class="fab fa-linkedin-in" />
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-github" />
+                    </a>
+                </div>
+            </Navbar>
         );
     }
 }
 
-export default Navbar;
+export default navbar;
