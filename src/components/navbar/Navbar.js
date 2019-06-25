@@ -2,6 +2,7 @@ import React from 'react';
 
 // Bootstrap
 import Image from 'react-bootstrap/Image';
+import Nav from 'react-bootstrap/Nav';
 
 // Styled-Components
 import { Navbar, NavItem } from './navbar.style';
@@ -9,15 +10,15 @@ import thumbnail from '../../assets/images/profesional_thumb.jpeg';
 
 class navbar extends React.Component {
     state = {
-        selected: 'about',
+        // selected: 'about',
+        selected: '',
     };
 
     select = e => {
-        const selected = e.target.text.toLowerCase();
-
-        this.setState({
-            selected: selected,
-        });
+        // const selected = e.target.text.toLowerCase();
+        // this.setState({
+        //     selected: selected,
+        // });
     };
 
     render() {

@@ -49,19 +49,5 @@ export const Container = styled(Page)`
             background: ${colors.second};
             color: white;
         }
-
-        .git-card-icon {
-            position: absolute;
-            bottom: 1.5rem;
-            right: 1.5rem;
-
-            &:hover {
-                transform: scale(1.1);
-            }
-
-            &:active {
-                transform: translateY(-0.5rem);
-            }
-        }
     }
 `;

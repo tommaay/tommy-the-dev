@@ -42,11 +42,12 @@ export const Navbar = styled.div`
 
 export const NavItem = styled.a`
     text-decoration: none;
-    color: ${props => (props.active ? 'white' : 'gray')};
+    /* color: ${props => (props.active ? 'white' : 'gray')}; */
+    color: white;
     margin: 1rem 0;
     font-size: 2.4rem;
 
     :hover {
-        color: white;
+        color: orangered;
     }
 `;

@@ -30,6 +30,7 @@ class Portfolio extends React.Component {
     render() {
         return (
             <>
+                <a name="portfolio" />
                 <Container>
                     <h1 className="heading-main mb-60 mt-60">
                         <span className="impact">Portfolio</span>
