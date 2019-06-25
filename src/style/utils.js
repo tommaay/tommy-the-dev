@@ -17,7 +17,7 @@ export const Page = styled.section`
     justify-content: center;
     padding: 3rem 6rem;
     margin-left: ${size.navbar};
-    box-shadow: 0px 2px 10px -8px gray;
+    box-shadow: 0px 2px 10px -8px ${colors.second};
 
     .content {
         max-width: 120rem;
@@ -33,6 +33,10 @@ export const Page = styled.section`
 
     .mb-60 {
         margin-bottom: 6rem;
+    }
+
+    .mt-60 {
+        margin-top: 6rem;
     }
 
     .font-24 {

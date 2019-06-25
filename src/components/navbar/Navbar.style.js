@@ -30,7 +30,7 @@ export const Navbar = styled.div`
             border-radius: 100%;
             text-align: center;
             font-size: 2.3rem;
-            line-height: 4.5rem;
+            line-height: 4.7rem;
             margin: 0 1rem;
 
         :hover {

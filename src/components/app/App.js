@@ -4,6 +4,7 @@ import React from 'react';
 import Navbar from '../navbar/navbar';
 import AboutContainer from '../about/about';
 import Skills from '../skills/skills';
+import Portfolio from '../portfolio/portfolio';
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
 
             <AboutContainer />
             <Skills />
+            <Portfolio />
         </div>
     );
 }
